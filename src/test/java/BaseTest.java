@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +19,8 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void testsSetUp() {
-//        driver = new ChromeDriver();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+//        driver = new FirefoxDriver();
 
         driver.manage().window().maximize();
         driver.get("https://ru.wikipedia.org/wiki/Selenium");
