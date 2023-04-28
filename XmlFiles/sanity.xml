@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sanity" >
+    <test name="Shot">
+        <classes>
+            <class name="SimpleTest">
+                <methods>
+                    <include name="testOne"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

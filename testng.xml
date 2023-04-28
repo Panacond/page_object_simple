@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <suite-files>
+        <suite-file path="XmlFiles/smoke.xml"></suite-file>
+        <suite-file path="XmlFiles/sanity.xml"></suite-file>
+    </suite-files>
+    <test name="one" >
+        <classes>
+            <class name="SimpleTest" />
+        </classes>
+    </test>
+
+<test name="two">
+    <classes>
+        <class name="SimpleTest">
+            <methods>
+                <include name="testOne"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>
